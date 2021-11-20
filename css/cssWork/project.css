@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#filters{
+    padding: 20px;
+    width: 100%;
+}
+
+#filters .heading{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-bottom: 10px; 
+    font-family: 'Praise', cursive;
+    font-size: 60px;
+}
+
+#filters ul{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+#filters ul li{
+    list-style: none;
+    background: #fff;
+    padding: 8px 20px;
+    margin: 5px;
+    color: #111;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#filters ul li.active{
+    background: #39ff14;
+    color: #111;
+}
+
+.product{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work{
+    width: 100%;
+}
+
+.product .itemBox{
+    position: relative;
+    width: 24%;
+    height: 300px;
+    margin: 3px;
+}
+
+.product .itemBox{
+    position: relative;
+    width: 32%;
+    height: 400px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    background: linear-gradient(90deg, #000000 0%, #000000 25%, #0ff 50%, rgb(0, 166, 255) 75%, #f0f 100%);
+    background-repeat: no-repeat;
+    background-size: 400% 400%;
+    cursor: pointer;
+}
+
+.product .recent{
+    width: 32%;
+}
+
+.product .itemBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    mix-blend-mode: screen;
+    background-repeat: no-repeat;
+    transition: 0.5s all;
+}
+
+.product .itemBox:hover{
+    background-position: 100% 100%;
+    transition: 0.5s all;
+}
+
+.footer_bar{
+    background: rgb(27, 27, 27) !important;
+}
+
+@media only screen and (max-width: 320px){
+    #filters .heading{
+        font-size: 20px;
+    }
+
+    #filters ul{
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        border-radius: 25px;
+    }
+
+    #filters ul li.active {
+        background: #39ff14;
+        color: #111;
+    }
+
+    #filters ul li{
+        list-style: none;
+        background: #fff;
+        padding: 6px;
+        margin: 3px 3px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        width: 45%;
+        font-weight: bold;
+        font-size: 8px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product .itemBox {
+        position: relative;
+        width: 47%;
+        height: 150px;
+        margin-bottom: 20px;
+        object-fit: contain;
+        background: linear-gradient(90deg, #000000 0%, #000000 25%, #0ff 50%, rgb(0, 166, 255) 75%, #f0f 100%);
+        background-repeat: no-repeat;
+        background-size: 400% 400%;
+        cursor: pointer;
+    }
+
+    .footer_bar{
+        font-size: 10px;
+    }
+}

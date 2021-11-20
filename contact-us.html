@@ -1,0 +1,606 @@
+<!-- This is 'contact.html' File of Number9-VFX  -->
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+    <!-- This is the Head Section -->
+    <head>
+
+        <!-- General Meta Information for Search Engine -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Number9-VFX</title>
+
+        <!-- Required Meta Information of Euthenia Template -->
+        <meta name="description"  content="Professional Creative Template" />
+        <meta name="author" content="IG Design">
+        <meta name="keywords"  content="ig design, website, design, html5, css3, jquery, creative, clean, animated, portfolio, blog, one-page, multi-page, corporate, business," />
+        <meta property="og:title" content="Professional Creative Template" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="470" />
+        <meta property="og:image:height" content="246" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:description" content="Professional Creative Template" />
+        <meta name="twitter:card" content="" />
+        <meta name="twitter:site" content="https://twitter.com/IvanGrozdic" />
+        <meta name="twitter:domain" content="http://ivang-design.com/" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="Professional Creative Template" />
+        <meta name="twitter:image" content="http://ivang-design.com/" />
+
+        <!-- Required Meta Information for Mobile Specific Usage -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="theme-color" content="#212121"/>
+        <meta name="msapplication-navbutton-color" content="#212121"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#212121"/>
+
+        <!-- Required Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+        <!-- Link to the Required CSS stylesheets -->
+
+		<link rel="stylesheet" href="css/cssEuthenia/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/cssEuthenia/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/cssEuthenia/animsition.min.css"/>
+        <link rel="stylesheet" href="css/cssEuthenia/swiper.min.css">
+        <link rel="stylesheet" href="css/cssEuthenia/style.css">
+        
+        <!-- Link to the Required Icons -->
+        <link rel="icon" type="image/png" href="https://www.number9vfx.com/wp-content/uploads/2021/04/logo.svg">
+        <link rel="apple-touch-icon" href="images/imagesEuthenia/apple-touch-icon.jpg">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/imagesEuthenia/apple-touch-icon-72x72.jpg">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/imagesEuthenia/apple-touch-icon-114x114.jpg">
+
+		<style>
+			
+			.nav-up {
+                top: -40px;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            .main {
+                background: url(/images/ban.jpg) no-repeat;
+                background-size: cover;
+                display: table;
+                width: 100%;
+                position: relative;
+            }
+
+            .main:after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                left: 0;
+                z-index: -1;
+                opacity: .85;
+                position: absolute;
+        
+
+            }
+            .nav-icon{
+                margin-left: 990px;
+                margin-top: -540px;
+            }
+
+            .main-title {
+                font-size: 24px;
+                line-height: 28px;
+                color: #fff;
+                font-weight: 400;
+            }
+
+            .hello {
+                color: #fff;
+                line-height: 51px;
+            }
+
+            .main-content {
+                padding: 0 60px;
+                vertical-align: middle;
+                display: table-cell;
+                height: 100%;
+                width: 100%;
+            }
+
+            .logo a{
+                color: orange;
+                margin-left: 30px;         
+                border: 1px solid white;
+                background: white;
+                font-size: 30px;
+            }
+
+            .logo a:hover{
+                text-decoration: none;
+            }
+
+                        .full-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                background-size: cover;
+                opacity: 0;
+                visibility: hidden;   
+                transition: opacity 0.3s 0s, visibility 0s 0.3s;
+            }
+
+            .full-menu .modal-close {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                padding: 50px;
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                background:rgba(0, 0, 0, 0.3) url(/img/close.png)no-repeat center center;
+                overflow: hidden;
+                text-indent: 100%;
+                white-space: nowrap;
+                visibility: hidden;
+                opacity: 0;     
+                transform: scale(0);
+                visibility: 0s 0.3s, opacity 0.3s 0s;
+                transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+            }
+
+            .no-touch .full-menu .modal-close:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .full-menu.visible {
+                background-size: 100%;
+                opacity: 1;
+                visibility: visible;   
+                transition: opacity 0.7s, visibility 0s;
+            }
+
+            .full-menu.visible .fullmenu-content {
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .full-menu.visible .modal-close {
+                visibility: visible;
+                opacity: 1;    
+                transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;     
+                transform: scale(1);
+            }
+
+            .cd-transition-layer {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                visibility: hidden;
+                overflow: hidden;
+            }
+
+            .cd-transition-layer .bg-layer {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translateY(-50%) translateX(-2%);   
+                transform: translateY(-50%) translateX(-2%);     
+                height: 100%;
+                /* our sprite is composed of 25 frames */
+                width: 2500%;
+                background: url(/img/ink.png) no-repeat 0 0;
+                background-size: 100% 100%;
+            }
+
+            .cd-transition-layer.visible {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .cd-transition-layer.opening .bg-layer {     
+                animation: cd-sequence 1.0s steps(24);     
+                animation-fill-mode: forwards;
+            }
+
+            .cd-transition-layer.closing .bg-layer {     
+                animation: cd-sequence-reverse 1.0s steps(24);    
+                animation-fill-mode: forwards;
+            }
+
+            .no-cssanimations .cd-transition-layer {
+                display: none;
+            }
+
+            
+            @keyframes cd-sequence {
+                0% {
+                    transform: translateY(-50%) translateX(-2%);
+                }
+                100% {        
+                    transform: translateY(-50%) translateX(-98%);
+                }
+            }
+
+            @keyframes cd-sequence-reverse {
+                0% {
+                    
+                    transform: translateY(-50%) translateX(-98%);
+                }
+                100% {
+                    
+                    transform: translateY(-50%) translateX(-2%);
+                }
+            }
+
+            .full-menu .fullmenu-content {
+                height: 100%;
+                width: 100%;
+                display: table;
+            }
+
+            .page-menu {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .page-menu li {
+                line-height: 50px;
+                margin-left: -25px;
+            }
+
+            .page-menu li:last-child {
+                line-height: 90px;
+            }
+
+            .page-menu li a {
+                color: #fff;
+                font-size: 26px;
+                position: relative;
+                font-weight: 500;  
+            }
+
+            .social img {
+                width: 15px;
+            }
+
+            .main .social {
+                margin-top: 30px;
+            }
+
+            .social a {
+                margin-right: 20px;
+            }
+
+            .social a:hover img {
+                opacity: .6;
+                transition: all ease 0.3s;
+            }
+
+            .social a:last-child {
+                margin-right: 0px;
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                display: flex;
+                width: 100%;
+                z-index: 2;
+            }
+
+            .contain{
+                display: flex;
+                width: 100%;
+                margin: 15px 30px;
+                justify-content: space-between
+            }
+
+            .nav-icon {
+                width: 23px;
+                height: 18px;
+                position: relative;    
+                transform: rotate(0deg);     
+                transition: .5s ease-in-out;
+                cursor: pointer;
+                margin-top: 7px;
+            }
+
+            .nav-icon span {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background: #fff;
+                opacity: 1;    
+                transform: rotate(0deg);   
+                transition: .25s ease-in-out;
+            }
+
+            .nav-icon span:nth-child(1) {
+                top: 0px;     
+                transform-origin: left center;
+            }
+
+            .nav-icon span:nth-child(2) {
+                top: 6px;    
+                transform-origin: left center;
+            }
+
+            .nav-icon span:nth-child(3) {
+                top: 12px;     
+                transform-origin: left center;
+                width: 60%;
+                right: 0 !important;
+            }
+
+            .nav-icon:hover span:nth-child(3) {
+                width: 100%;
+            }
+
+            .navigation{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                overflow: hidden;
+            }
+
+            .navigation ul{
+                list-style: none;
+                text-align: center;
+            }
+
+            .navigation ul a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 2em;
+                padding: 5px 20px;
+                display: inline-flex;
+                font-weight: 700;
+                transition: 0.5s;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            .navigation ul:hover li a{
+                color: #fff;
+            }
+
+            .navigation ul li:hover a{
+                color: #39FF14;
+            }
+
+            .navigation ul li a:before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 6em;
+                color: #bebebe;
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 500px;
+                transition: letter-spacing 0.5s;
+            }
+
+            .navigation ul li a:hover:before{
+                content: attr(data-text);
+                opacity: 0.3;
+                letter-spacing: 10px;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                border-radius: 0;
+            }
+		</style>
+
+    </head>
+
+    <!-- This is the Body Section -->
+    <body>
+        
+		<div class="animsition">
+				
+			<!-- Header - Navigation and Logo  -->
+			<header class="cd-header cursor-show">
+				<div class="header-wrapper">
+					<div class="logo-wrap">
+						<a href="home.html" class="hover-target animsition-link"><img width="100" height="100" src="https://www.number9vfx.com/wp-content/uploads/2021/04/logo.svg" alt=""></a>
+					</div>
+					<div class="nav-but-wrap">
+						<div class="menu-icon hover-target">
+							<span class="menu-icon__line menu-icon__line-left"></span>
+							<span class="menu-icon__line"></span>
+							<span class="menu-icon__line menu-icon__line-right"></span>
+						</div>					
+					</div>					
+				</div>				
+			</header>
+
+			<div class="nav cursor-show">
+				<div class="nav__content">
+					<div class="curent-page-name-shadow">Contact</div>
+					<ul class="nav__list">
+						<li class="nav__list-item"><a href="home.html" class="hover-target animsition-link">Home</a></li>
+						<li class="nav__list-item"><a href="about-us.html" class="hover-target animsition-link">About Us</a></li>
+						<li class="nav__list-item"><a href="our-work.html" class="hover-target animsition-link">Our Work</a></li>
+						<li class="nav__list-item"><a href="services.html" class="hover-target animsition-link">Our Services</a></li>
+						<li class="nav__list-item active-nav"><a href="#" class="hover-target animsition-link">Contact Us</a></li>
+					</ul>
+					<!-- <div class="navigation nav__list">
+						<ul>
+						  <li><a href="home.html" data-text="Home">Home</a></li>
+						  <li><a href="about-us.html" data-text="About">About Us</a></li>
+						  <li><a href="#" data-text="Work">Work</a></li>
+						  <li><a href="services.html" data-text="Services">Services</a></li>
+						  <li><a href="contact-us.html" data-text="Contact">Contact Us</a></li>
+						</ul>
+					</div> -->
+				</div>
+			</div>	
+
+			<div class="shadow-title parallax-top-shadow">Number9-VFX</div>
+			
+			<div class="section padding-page-top padding-bottom over-hide z-bigger">
+				<div class="container z-bigger">
+					<div class="row page-title px-5 px-xl-2">
+						<div class="col-12 parallax-fade-top">
+							<h1>Let's Collaborate</h1>
+						</div>
+						<div class="offset-1 col-11 parallax-fade-top mt-2 mt-sm-3">
+							<p>Get in Touch</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section padding-bottom-big over-hide z-bigger">
+				<div class="container">
+					<div class="row px-5 px-xl-2">
+						<div class="col-lg-9">
+							<div class="row ajax-form">
+								<div class="col-md-6">
+									<input class="hover-target" name="name" type="text" placeholder="Your Name: *" autocomplete="off"/>
+								</div>	
+								<div class="col-md-6 mt-4 mt-md-0">
+									<input class="hover-target" name="email" type="email" placeholder="E-Mail: *" autocomplete="off"/>
+								</div>	
+								<div class="col-md-6 mt-4">
+									<input class="hover-target" name="phone" type="tel" placeholder="Phone Number:" autocomplete="off"/>
+								</div>	
+								<div class="col-md-6 mt-4">
+									<input class="hover-target" name="location" type="text" placeholder="City, Country:" autocomplete="off"/>
+								</div>	
+								<div class="col-md-6 mt-4 hover-target">
+									<select name="budget" class="wide">
+										<option data-display="Budget">Budget</option>
+										<option value="0">Below £2000</option>
+										<option value="1">£2000 - £5000</option>
+										<option value="2">£5000 - £10000</option>
+										<option value="3">£10000 - £25000</option>
+										<option value="4">£25000 - £50000</option>
+										<option value="5">£50000+</option>
+									</select>
+								</div>	
+								<div class="col-md-6 mt-4 hover-target">
+									<select name="interested" class="wide">
+										<option data-display="Interested For">Interested For</option>
+										<option value="1">Feature Film & HETV VFX</option>
+										<option value="2">Indie Film</option>
+										<option value="3">VFX Studio Partnerships</option>
+										<option value="4">Development</option>
+										<option value="5">Roto</option>
+										<option value="6">Track</option>
+										<option value="7">Key</option>
+										<option value="8">Paint</option>
+										<option value="9">CG</option>
+										<option value="10">Comp</option>
+									</select>
+								</div>	
+								<div class="col-md-6 mt-4">
+									<input class="hover-target" name="name" type="text" placeholder="Company Name:" autocomplete="off"/>
+								</div>	
+								<div class="col-md-6 mt-4">
+									<input class="hover-target" name="name" type="text" placeholder="Website:" autocomplete="off"/>
+								</div>	
+								<div class="col-md-12 mt-4">
+									<textarea class="hover-target" name="message" placeholder="Tell Us Everything *"></textarea>
+								</div>
+								<div class="col-md-12 mt-4">
+									<button class="hover-target" id="send" data-lang="en"><span>Submit</span></button>
+								</div>
+							</div>	
+						</div>
+						<div class="col-lg-3 mt-4 mt-lg-0">
+							<div class="section background-dark-4 p-4">
+								<p class="mb-3" style="font-weight: bold; text-transform: uppercase;">Number9 VFX Production Services UK LTD</p>
+								<h6 class="mb-3">Call Us</h6>
+								<p class="mb-3">342056527</p>
+								<h6 class="mb-3">Visit Us</h6>
+								<p class="mb-4">Bradsbury Court Unit 7, Level 5, Lyon Sqaure, Harrow, HA1, 2EX</p>
+								<h6 class="mb-3">Email Us</h6>
+								<p class="mb-0">info@number9vfx.com</p>
+							</div>
+						</div>
+					</div>		
+				</div>				
+			</div>
+
+			<div class="section contact-map padding-top-bottom-big over-hide z-bigger" style="background-image: url(images/imagesEuthenia/map.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center z-bigger">
+							<h5>Bradsbury Court Unit 7, Level 5, Lyon Sqaure, Harrow, HA1, 2EX</h5>
+						</div>
+						<div class="col-md-12 mt-5 text-center">
+							<a href="https://www.google.com/maps/place/99-81+Middagh+St,+Brooklyn,+NY+11201,+USA/@40.6999552,-73.9936128,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25a36fb73a3d1:0xb653e2f02fd08084!8m2!3d40.6999552!4d-73.9914241" class="contact-link hover-target" target="_blank">Find us on Map</a>
+						</div>
+					</div>
+				</div>		
+			</div>
+
+			<div class="section padding-top-bottom over-hide z-bigger background-dark-3 footer">
+				<div class="shadow-on-footer" data-scroll-reveal="enter bottom move 30px over 0.5s after 0.1s">info@number9vfx.com</div>
+				<div class="container" data-scroll-reveal="enter bottom move 20px over 0.5s after 0.4s">
+					<div class="row">
+						<div class="col-12 text-center z-bigger py-5">
+							<div class="footer-lines">
+								<a href="mailto:info@number9vfx.com" class="hover-target"><h4>Email Us</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>	
+			
+			<div class="social-fixed">
+				<a href="#" class="hover-target">N</a>
+				<a href="#" class="hover-target">9</a>
+				<a href="#" class="hover-target">V</a>
+				<a href="#" class="hover-target">F</a>
+				<a href="#" class="hover-target">X</a>
+			</div>
+			<div class="copyr">
+				2021 © <a href="https://themeforest.net/user/ig_design/portfolio" class="hover-target">Number9-VFX</a>
+			</div>
+			
+			<div class="scroll-to-top hover-target"></div>
+			
+			<!-- Page Cursor -->
+			<div class='cursor' id="cursor"></div>
+			<div class='cursor2' id="cursor2"></div>
+			<div class='cursor3' id="cursor3"></div>		
+			
+		</div>
+
+		<!-- Link to the Required JS Scripts -->
+		<script src="js/jsWork/jquery.js"></script>
+        <script src="js/jsWork/script.js"></script>
+
+		<script src="js/jsEuthenia/jquery.min.js"></script> 
+		<script src="js/jsEuthenia/popper.min.js"></script>
+		<script src="js/jsEuthenia/bootstrap.min.js"></script>
+		<script src="js/jsEuthenia/plugins.js"></script>  
+		<script src="js/jsEuthenia/custom.js"></script>
+
+
+    </body>
+
+</html>
